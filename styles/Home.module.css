@@ -54,15 +54,39 @@
   margin: 4rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
-.code {
-  background: #fafafa;
+.register {
+  color: #0070f3;
+  font-weight: bold;
+  border: 1px solid #0070f3;
+  border-radius:8px;
+  padding: 0.4rem;
+}
+
+.btn_window{
+  border: none;
+  background: #0070f3;
+  padding: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background .3s;
   border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-size: 1rem;
+  font-weight: bold;
+  -webkit-box-shadow: 5px 6px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 5px 6px 4px rgba(0, 0, 0, 0.25);
+    
+}
+
+.btn_window:hover {
+  -webkit-transform: translateY(-0.25rem);
+          transform: translateY(-0.25rem);
 }
 
 .grid {
@@ -70,12 +94,44 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 1200px;
+}
+
+.card_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid  #0070f3
+}
+
+.card_delete {
+  border: none;
+  background: red;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background .3s;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  -webkit-box-shadow: 5px 6px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 5px 6px 4px rgba(0, 0, 0, 0.25);
 }
 
 .card {
+  
   margin: 1rem;
-  padding: 1.5rem;
+  padding: 2.5rem;
   text-align: left;
   color: inherit;
   text-decoration: none;
@@ -90,9 +146,13 @@
 .card:active {
   color: #0070f3;
   border-color: #0070f3;
+  cursor: pointer
 }
 
 .card h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
 }
@@ -104,7 +164,6 @@
 }
 
 .logo {
-  height: 1em;
   margin-left: 0.5rem;
 }
 
