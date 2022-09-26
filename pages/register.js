@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import api from "./services/api";
-import api2 from "./services/api2";
+import api from "../services/api";
+import api2 from "../services/api2";
 import React, { useEffect, useState } from "react";
+import Link from 'next/link'
 
 export default function Register() {
 
@@ -57,8 +57,13 @@ export default function Register() {
         </h1>
 
         <p className={styles.description}>
-            <a href='/'><button className={styles.btn_window}>View Coins</button></a>
-            <a href='/register'><button className={styles.btn_window}>Register Coins</button></a>
+          <Link href='/'>
+            <a ><button className={styles.btn_window}>View Coins</button></a>
+          </Link>
+
+          <Link href='/register'>
+            <a ><button className={styles.btn_window}>Register Coins</button></a>
+          </Link>
         </p>
 
         <div className={styles.grid}>

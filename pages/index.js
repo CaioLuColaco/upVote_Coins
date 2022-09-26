@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import React, { useEffect, useState } from "react";
-import api from "./services/api";
-import api2 from "./services/api2";
+import api from "../services/api";
+import api2 from "../services/api2";
+import Link from 'next/link'
 
 export default function Home() {
 
@@ -76,8 +77,13 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          <a href='/'><button className={styles.btn_window}>View Coins</button></a>
-          <a href='/register'><button className={styles.btn_window}>Register Coins</button></a>
+          <Link href='/'>
+            <a ><button className={styles.btn_window}>View Coins</button></a>
+          </Link>
+
+          <Link href='/register'>
+            <a ><button className={styles.btn_window}>Register Coins</button></a>
+          </Link>
         </p>
 
         <div className={styles.grid}>
@@ -103,17 +109,10 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
           Powered by{' '}
           <span className={styles.logo}>
             Caio Lucena Colaço
           </span>
-        </a>
       
       </footer>
     </div>
