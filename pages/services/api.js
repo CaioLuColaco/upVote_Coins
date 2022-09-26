@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:2005",
+  baseURL: "https://api-upvote-golang.herokuapp.com",
 });
 
 export default api;

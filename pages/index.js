@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import React, { useEffect, useState } from "react";
 import api from "./services/api";
@@ -29,6 +28,20 @@ export default function Home() {
 
   }
 
+  const updateDatabase = async () => {
+    const res = await api.get("/coins")
+    for(let coin of res.data) {
+      api2.get(`/json/${coin.shortname}`)
+      .then(response => api.patch(`/coin/${coin.ID}`, {price: parseFloat(response.data[0].bid)}))
+      .catch((err) => console.log(err.message))
+    }
+  }
+
+  useEffect(() => {
+    updateDatabase()   
+      
+  }, []);
+
   useEffect(() => {
     api.get("/coins")
       .then((response) => {
@@ -41,23 +54,12 @@ export default function Home() {
           return 0;
         })
 
-        response.data.map(coin => {
-          let atualPrice
-          api2.get(`/json/${coin.shortname}`)
-          .then(response => coin.price = response.data[0].bid)
-          .catch(err => console.log(err))
-          // console.log(atualPrice)
-          // coin.price = atualPrice
-        })
-
         setCoinsRegistred(response.data)
       })
       .catch((err) => {
         console.error("ops! ocorreu um erro" + err);
       });
   }, []);
-
-  // console.log(coinsRegistered)
 
   return (
     <div className={styles.container}>
@@ -88,7 +90,7 @@ export default function Home() {
                         <h2>{coin.shortname}</h2>
                       </div>
 
-                        <p className={styles.card_content}>R$ {coin.price}</p>
+                        <p className={styles.card_content}>{coin.price!=0?`R$ ${coin.price}`:"Not Price"}</p>
                         <p className={styles.card_content}>{coin.votes} votos</p>
                     </a>
                     <button onClick={() => deleteCoin(coin.ID)} className={styles.card_delete}>Delete</button>

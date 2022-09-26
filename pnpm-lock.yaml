@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   axios: ^0.27.2
+  dotenv: ^16.0.2
   eslint: 8.23.1
   eslint-config-next: 12.3.1
   next: 12.3.1
@@ -10,6 +11,7 @@ specifiers:
 
 dependencies:
   axios: 0.27.2
+  dotenv: 16.0.2
   next: 12.3.1_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -560,6 +562,11 @@ packages:
     dependencies:
       esutils: 2.0.3
     dev: true
+
+  /dotenv/16.0.2:
+    resolution: {integrity: sha512-JvpYKUmzQhYoIFgK2MOnF3bciIZoItIIoryihy0rIA+H4Jy0FmgyKYAHCTN98P5ybGSJcIFbh6QKeJdtZd1qhA==}
+    engines: {node: '>=12'}
+    dev: false
 
   /emoji-regex/9.2.2:
     resolution: {integrity: sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==}
