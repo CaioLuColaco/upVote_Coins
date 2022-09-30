@@ -6,8 +6,12 @@
 </div>
 
 <h3 align="center"> 
-	🚧  UPVote 💲 Em construção...  🚧
+	  UPVote 💲 Working...  👨‍💻
 </h3>
+
+<h4 align="center"> 
+	  https://up-vote-coins-56gxvu7k8-caiolucolaco.vercel.app/
+</h4>
 
 <h3 align="center">
  <a href="#features">Features</a> •
